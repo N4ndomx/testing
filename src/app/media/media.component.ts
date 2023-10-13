@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MediaDevService } from '../services/media-dev.service';
 import { MediaProxyService } from '../services/media-proxy.service';
 
+
+
+
 @Component({
   selector: 'app-media',
   templateUrl: './media.component.html',
@@ -40,3 +43,6 @@ export class MediaComponent implements OnInit {
   }
 
 }
+
+
+
