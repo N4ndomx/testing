@@ -12,7 +12,9 @@ export class MediaDevService {
   constructor(
     private readonly http: HttpClient
   ) { }
+
   apiURL = 'https://node-desv-service-n4ndomx.cloud.okteto.net/dev-hours'
+
 
   //http opcions
 

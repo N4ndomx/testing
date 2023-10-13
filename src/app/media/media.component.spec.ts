@@ -4,7 +4,9 @@ import { MediaComponent } from './media.component';
 import { MediaDevService } from '../services/media-dev.service';
 import { of } from 'rxjs';
 import { MediaProxyService } from '../services/media-proxy.service';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 describe('MediaComponent', () => {
   let component: MediaComponent;
@@ -15,7 +17,9 @@ describe('MediaComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [MediaComponent],
+
       imports: [HttpClientModule], // Añade HttpClientTestingModule aquí
+
       providers: [MediaDevService],
     }).compileComponents();
     fixture = TestBed.createComponent(MediaComponent);
@@ -24,7 +28,9 @@ describe('MediaComponent', () => {
   });
 
 
+
   xit('Should return mean=60.32 with the data:', fakeAsync(() => {
+
     const testData = [
       15.0,
       69.9,
@@ -48,7 +54,9 @@ describe('MediaComponent', () => {
   }));
 
 
+
   xit('Should return mean=550.6 with the data ', fakeAsync(() => {
+
     const testData = [
       160,
       591,
@@ -72,12 +80,15 @@ describe('MediaComponent', () => {
   }));
 
   // Prueba real Revisar 
+
   it('Should return mean=60.32 with the data DEV', waitForAsync(() => {
+
     // Realiza la solicitud HTTP en tu componente.
 
     component.ngOnInit();
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
+
       expect(component.averageDev).toBe(60.32);
     });
   }));
@@ -89,6 +100,7 @@ describe('MediaComponent', () => {
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
       expect(component.averageProxy).toBe(550.6);
+
     });
   }));
 

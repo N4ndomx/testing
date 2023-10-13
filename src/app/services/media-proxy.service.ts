@@ -13,7 +13,9 @@ export class MediaProxyService {
   constructor(
     private readonly http: HttpClient
   ) { }
+
   apiURL = 'https://node-desv-service-n4ndomx.cloud.okteto.net/proxy-size'
+
 
   //http opcions
 
