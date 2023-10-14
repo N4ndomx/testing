@@ -23,7 +23,7 @@ describe('StddevComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should return mean=62.26 with the data: DEV', waitForAsync(() => {
+  it('Should return mean=59.06 with the data: DEV', waitForAsync(() => {
 
     // Realiza la solicitud HTTP en tu componente.
 
@@ -35,7 +35,7 @@ describe('StddevComponent', () => {
     });
   }));
 
-  it('Should return mean=572.03 with the data Proxy', waitForAsync(() => {
+  it('Should return mean=542.67 with the data Proxy', waitForAsync(() => {
     // Realiza la solicitud HTTP en tu componente.
 
     component.ngOnInit();
