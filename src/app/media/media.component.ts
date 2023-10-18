@@ -17,15 +17,15 @@ export class MediaComponent implements OnInit {
     private serviceProxy: MediaProxyService
   ) { }
 
-  averageDev = 0
-  averageProxy = 0
+  averageDev: number[] = []
+  averageProxy: number[] = []
 
   ngOnInit(): void {
     this.serviceDev.getData().subscribe((data: any) => {
-      this.averageDev = this.calcularMedia(data.data);
+      this.averageDev = data.data;
     })
     this.serviceProxy.getData().subscribe((data: any) => {
-      this.averageProxy = this.calcularMedia(data.data);
+      this.averageProxy = data.data;
     })
 
   }

@@ -31,7 +31,7 @@ export class StddevComponent {
   calcularDesviacionEstandar(data: number[]): number {
     if (!data || data.length === 0) return 0;
 
-    const mean = data.reduce((acc, val) => acc + val, 0) / data.length;
+    const mean = this.compMedia.calcularMedia(data)
     const squaredDifferences = data.map((val) => Math.pow(val - mean, 2));
     const variance =
       squaredDifferences.reduce((acc, val) => acc + val, 0) / data.length;

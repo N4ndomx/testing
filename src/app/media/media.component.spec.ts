@@ -29,55 +29,55 @@ describe('MediaComponent', () => {
 
 
 
-  xit('Should return mean=60.32 with the data:', fakeAsync(() => {
+  // xit('Should return mean=60.32 with the data:', fakeAsync(() => {
 
-    const testData = [
-      15.0,
-      69.9,
-      6.5,
-      22.4,
-      28.4,
-      65.9,
-      19.4,
-      198.7,
-      38.8,
-      138.2
-    ];
+  //   const testData = [
+  //     15.0,
+  //     69.9,
+  //     6.5,
+  //     22.4,
+  //     28.4,
+  //     65.9,
+  //     19.4,
+  //     198.7,
+  //     38.8,
+  //     138.2
+  //   ];
 
-    const mediaService = TestBed.inject(MediaDevService); // Obtiene la instancia del servicio
-    spyOn(mediaService, 'getData').and.returnValue(of({ data: testData }));
-    // Espera a que se complete la llamada asincrónica
-    component.ngOnInit()
-    tick();
+  //   const mediaService = TestBed.inject(MediaDevService); // Obtiene la instancia del servicio
+  //   spyOn(mediaService, 'getData').and.returnValue(of({ data: testData }));
+  //   // Espera a que se complete la llamada asincrónica
+  //   component.ngOnInit()
+  //   tick();
 
-    expect(component.averageDev).toBe(60.32);
-  }));
+  //   expect(component.averageDev).toBe(60.32);
+  // }));
 
 
 
-  xit('Should return mean=550.6 with the data ', fakeAsync(() => {
+  // xit('Should return mean=550.6 with the data ', fakeAsync(() => {
 
-    const testData = [
-      160,
-      591,
-      114,
-      229,
-      230,
-      270,
-      128,
-      1657,
-      624,
-      1503
-    ];
+  //   const testData = [
+  //     160,
+  //     591,
+  //     114,
+  //     229,
+  //     230,
+  //     270,
+  //     128,
+  //     1657,
+  //     624,
+  //     1503
+  //   ];
 
-    const mediaService = TestBed.inject(MediaProxyService); // Obtiene la instancia del servicio
-    spyOn(mediaService, 'getData').and.returnValue(of({ data: testData }));
-    // Espera a que se complete la llamada asincrónica
-    component.ngOnInit()
-    tick();
+  //   const mediaService = TestBed.inject(MediaProxyService); // Obtiene la instancia del servicio
+  //   spyOn(mediaService, 'getData').and.returnValue(of({ data: testData }));
+  //   // Espera a que se complete la llamada asincrónica
+  //   component.ngOnInit()
+  //   tick();
 
-    expect(component.averageProxy).toBe(550.6);
-  }));
+  //   expect(component.averageProxy).toBe(550.6);
+  // }));
 
   // Prueba real Revisar 
 
@@ -89,7 +89,7 @@ describe('MediaComponent', () => {
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
 
-      expect(component.averageDev).toBe(60.32);
+      expect(component.calcularMedia(component.averageDev)).toBe(60.32);
     });
   }));
 
@@ -99,7 +99,7 @@ describe('MediaComponent', () => {
     component.ngOnInit();
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
-      expect(component.averageProxy).toBe(550.6);
+      expect(component.calcularMedia(component.averageProxy)).toBe(550.6);
 
     });
   }));
