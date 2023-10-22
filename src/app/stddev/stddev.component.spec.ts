@@ -17,6 +17,8 @@ describe('StddevComponent', () => {
     fixture = TestBed.createComponent(StddevComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    component.ngOnInit();
+
   });
 
   it('should create', () => {
@@ -27,7 +29,6 @@ describe('StddevComponent', () => {
 
     // Realiza la solicitud HTTP en tu componente.
 
-    component.ngOnInit();
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
 
@@ -38,7 +39,6 @@ describe('StddevComponent', () => {
   it('Should return mean=542.67 with the data Proxy', waitForAsync(() => {
     // Realiza la solicitud HTTP en tu componente.
 
-    component.ngOnInit();
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
       expect(component.calcularDesviacionEstandar(component.averageProxy)).toBeCloseTo(542.67, 2);

@@ -25,6 +25,8 @@ describe('MediaComponent', () => {
     fixture = TestBed.createComponent(MediaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    component.ngOnInit();
+
   });
 
 
@@ -85,7 +87,6 @@ describe('MediaComponent', () => {
 
     // Realiza la solicitud HTTP en tu componente.
 
-    component.ngOnInit();
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
 
@@ -96,7 +97,6 @@ describe('MediaComponent', () => {
   it('Should return mean=550.6 with the data Proxy', waitForAsync(() => {
     // Realiza la solicitud HTTP en tu componente.
 
-    component.ngOnInit();
     // Deja que Angular maneje la solicitud HTTP.
     fixture.whenStable().then(() => {
       expect(component.calcularMedia(component.averageProxy)).toBe(550.6);
