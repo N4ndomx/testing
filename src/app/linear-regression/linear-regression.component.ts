@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LinearRegressionTest1Service } from '../services/linear-regression-test1.service';
 import { MediaComponent } from '../media/media.component';
-import { sumaX, sumaXX, sumaXY, sumaY } from "../common/funcions";
+import { sumaX, sumaYY, sumaXY, } from "../common/funcions";
 
 @Component({
   selector: 'app-linear-regression',
@@ -54,7 +54,7 @@ export class LinearRegressionComponent implements OnInit {
   calcularb1(xValues: number[], yValues: number[]): number {
 
     const sumXY = sumaXY(xValues, yValues);
-    const sumXX = sumaXX(xValues);
+    const sumXX = sumaYY(xValues);
     const meanX = this.compoMedia.calcularMedia(xValues);
     const meanY = this.compoMedia.calcularMedia(yValues);
 
