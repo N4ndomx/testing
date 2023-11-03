@@ -33,4 +33,9 @@ describe('SimpsonComponent', () => {
     const result = component.simpson(1, 4, 6, 0.001, (x) => 1 / x);
     expect(result).toBeCloseTo(1.38, 1);
   });
+
+  it('Distribution T', () => {
+    const result = component.simpson(0, 1.1, 10, 0.001, (x) => x, 9);
+    expect(result).toBeCloseTo(0.35005, 1);
+  });
 });
