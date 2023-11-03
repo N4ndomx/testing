@@ -32,7 +32,6 @@ export class SimpsonComponent {
       iteration++;
     }
 
-    // console.log(`Iterations: ${iteration}`);
     return integral;
   }
 
