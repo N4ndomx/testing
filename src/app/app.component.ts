@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testing';
+  componenteVisible: string = ''; // Variable que indica qué componente mostrar
+
+  mostrarComponente(componente: string) {
+    console.log(componente)
+    this.componenteVisible = componente;
+  }
 }
