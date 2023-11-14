@@ -35,7 +35,17 @@ describe('SimpsonComponent', () => {
   });
 
   it('Distribution T', () => {
-    const result = component.simpson(0, 1.1, 10, 0.001, (x) => x, 9);
+    const result = component.simpson(0, 1.1, 10, 0.00001, (x) => x, 9);
     expect(result).toBeCloseTo(0.35005, 1);
+  });
+
+  it('Distribution T', () => {
+    const result = component.simpson(0, 1.1812, 10, 0.00001, (x) => x, 10);
+    expect(result).toBeCloseTo(0.36757, 1);
+  });
+
+  it('Distribution T', () => {
+    const result = component.simpson(0, 2.75, 10, 0.00001, (x) => x, 30);
+    expect(result).toBeCloseTo(0.49500, 1);
   });
 });
