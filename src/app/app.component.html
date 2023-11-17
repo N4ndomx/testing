@@ -1,34 +1,9 @@
-<div class="rec-div">
+<div class="contenedor">
+  <div class="center rec-div ">
 
-  <div class="center">
+    <app-main-menu></app-main-menu>
 
-    <div *ngIf="!componenteVisible" class="btons-menu">
-
-      <h3>Menu Principal</h3>
-
-      <button class="btn-med-stddev" (click)="mostrarComponente('a1Component')">
-        <p>Media y desviacion</p>
-      </button>
-      <button class="btn-med-stddev" (click)="mostrarComponente('a3Component')">
-        <p>Regrecion Lineal y correlacion</p>
-      </button>
-      <button class="btn-med-stddev" (click)="mostrarComponente('a5Component')">
-        <p>Simpsons y Disp R</p>
-      </button>
-
-    </div>
   </div>
-
-  <!-- Renderizar el componente según la opción seleccionada -->
-  <div *ngIf="componenteVisible === ' a1Component' ">
-    <app-a1></app-a1>
-  </div>
-  <div *ngIf="componenteVisible === ' a3Component' ">
-    <app-a3></app-a3>
-  </div>
-  <div *ngIf="componenteVisible === ' a5Component' ">
-    <app-a5></app-a5>
-  </div>
-
+  <router-outlet></router-outlet>
 
 </div>

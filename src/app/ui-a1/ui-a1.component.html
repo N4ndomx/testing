@@ -1,0 +1,42 @@
+<div class="center rec-div izq mostrar">
+    <div class="posi ">
+        <a href="/">
+            <button type="button" class="btn btn-default btn-sm" style="margin-bottom: 22px;">
+                <span class="glyphicon glyphicon-chevron-left"></span> Regresar
+            </button>
+        </a>
+
+        <form>
+            <div class="mb-1">
+                <label class="form-label">Ingrese los Datos</label>
+                <div class="form-text">Recuerde separa los datos por una coma (,)</div>
+                <input type="text" [disabled]="datausuario" [(ngModel)]="dataplan" name="data"
+                    class="form-control inputs" placeholder="1,2,3,4...">
+            </div>
+
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-secondary" type="button" (click)="media()">Calcular Media </button>
+                <button class="btn btn-secondary" type="button" (click)="desviacion()">Calcular Desviacion
+                    estandar</button>
+
+                <label for="datatest">
+                    <input type="checkbox" id="datatest" name="datatest" (click)="dataUser()"> Datos de
+                    prueba
+                </label>
+            </div>
+
+
+
+
+
+            <div class="resultado">
+
+                <label class="form-label">Resultado</label>
+                <h2 style="color: chartreuse;">{{ result }}</h2>
+            </div>
+
+        </form>
+
+    </div>
+</div>

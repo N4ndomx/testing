@@ -1,0 +1,43 @@
+.rec-div {
+    border-radius: 1.3125rem;
+    background: #FFF;
+    width: 36rem;
+    height: 38rem;
+}
+
+.posi {
+    display: block;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.inputs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.resultado {
+    display: grid;
+    place-items: center;
+    margin-top: 5%;
+}
+
+.izq {
+    margin-left: 10rem
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
