@@ -1,0 +1,82 @@
+<div class="center rec-div izq mostrar">
+    <div class="posi ">
+
+        <form>
+            <div class="form-text">Recuerde separa los datos por una coma (,)</div>
+            <div class="mb-1">
+                <label class="form-label">Datos de X</label>
+                <input type="text" [disabled]="datausuario" [(ngModel)]="dataplanX " name="dataX"
+                    class="form-control inputs" placeholder="1,2,3,4...">
+            </div>
+
+            <div class="mb-1">
+                <label class="form-label"> Datos de Y</label>
+                <input type="text" [disabled]="datausuario" [(ngModel)]="dataplanY" name="dataY"
+                    class="form-control inputs" placeholder="1,2,3,4...">
+            </div>
+
+            <div class="mb-1 numcenter">
+                <label class="form-label">Ingrese el Dato a Predecir</label>
+                <input type="number" [(ngModel)]="dataplainNum" name="planNum" class="form-control inputs datapredic"
+                    placeholder="386">
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-secondary" type="button" (click)="linearRegre()">Calcular Regresion Lineal
+                </button>
+
+
+                <label for="datatest">
+                    <input type="checkbox" id="datatest" name="datatest" (click)="dataUser()"> Datos de
+                    prueba
+                </label>
+            </div>
+
+
+
+            <div class="grupoResul">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="form-label">B0</label>
+
+                        </td>
+                        <td>
+                            <label class="form-label">B1</label>
+
+                        </td>
+                        <td>
+                            <label class="form-label">Prediccion</label>
+
+                        </td>
+                        <td>
+                            <label class="form-label">Correlacion</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 style="color: chartreuse;">{{ b0 }}</h3>
+
+                        </td>
+                        <td>
+                            <h3 style="color: chartreuse;">{{ b1 }}</h3>
+
+                        </td>
+                        <td>
+                            <h3 style="color: chartreuse;">{{ result }}</h3>
+
+                        </td>
+                        <td>
+                            <h3 style="color: chartreuse;">{{ correlacio }}</h3>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+        </form>
+
+    </div>
+</div>

@@ -12,6 +12,7 @@ import { UiA1Component } from './ui-a1/ui-a1.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { FormsModule } from '@angular/forms';
 import { MediaComponent } from './media/media.component';
+import { UiA3Component } from './ui-a3/ui-a3.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MediaComponent } from './media/media.component';
     CorrelationComponent,
     SimpsonComponent,
     UiA1Component,
-    MainMenuComponent
+    MainMenuComponent,
+    UiA3Component
   ],
   imports: [
     BrowserModule,

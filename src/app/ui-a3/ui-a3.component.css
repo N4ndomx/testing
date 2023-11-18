@@ -1,0 +1,83 @@
+.rec-div {
+    overflow: auto;
+    border-radius: 1.3125rem;
+    background: #FFF;
+    width: 36rem;
+    height: 38rem;
+}
+
+.posi {
+    display: block;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.inputs {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.resultado {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.izq {
+    margin-left: 10rem
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.datapredic {
+    width: 5rem;
+}
+
+.numcenter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grupoResul {
+    margin-top: 8%
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: center;
+}
+
+th,
+td {
+    border: none;
+    /* Oculta las líneas de la tabla */
+}
+
+td {
+    width: 20%;
+    /* Establece el ancho fijo para cada celda */
+}
+
+td {
+    height: 1rem
+}
