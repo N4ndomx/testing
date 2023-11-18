@@ -12,7 +12,7 @@ import { desactivarDataUser, formatArryNum } from '../common/funcions';
 export class UiA1Component implements OnInit {
   arraydata: number[] = []
   datausuario = false
-  result = ""
+  result = "0"
   dataplan = ""
 
   constructor(
