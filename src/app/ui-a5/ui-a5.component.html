@@ -1,0 +1,59 @@
+<div class="center rec-div izq mostrar">
+    <div class="posi ">
+
+        <form>
+
+
+            <div class="mb-1 contenedor">
+                <div class="campo">
+                    <label for="funcion">Funcion :</label>
+                    <input type="text" [disabled]="dof > 0" name="funcion" class="form-control inputs"
+                        [(ngModel)]="funcionPlain" placeholder="f(x)">
+                </div>
+                <div class="campo">
+                    <label for="num_seg">Segmento :</label>
+                    <input type="text" name="num_seg" class="form-control inputs" [(ngModel)]="num_seg" placeholder="4">
+                </div>
+                <div class="campo">
+                    <label for="limiteSuper">Limite Superior :</label>
+                    <input type="number" [disabled]="datausuario" name="limiteSuper" class="form-control inputs"
+                        [(ngModel)]="x1" placeholder="1">
+                </div>
+                <div class="campo">
+                    <label for="dof">Dof :</label>
+                    <input type="number" [disabled]="datausuario" name="dof" class="form-control inputs"
+                        [(ngModel)]="dof">
+                </div>
+                <div class="campo">
+                    <label for="limiteInfer">Limite Inferior :</label>
+                    <input type="number" [disabled]="datausuario" name="limiteInfer" class="form-control inputs"
+                        [(ngModel)]="x0" placeholder="0">
+                </div>
+
+                <div class="campo">
+                    <label for="error">Error :</label>
+                    <input type="text" [disabled]="datausuario" name="error" class="form-control inputs"
+                        [(ngModel)]="error" placeholder="0.0001">
+
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-secondary" type="button" (click)="calcularSimpson()">Calcular Método de Simpson
+                </button>
+
+            </div>
+
+
+
+            <div class="resultado">
+
+                <label class="form-label">Area bajo la Curva</label>
+                <h2 style="color: chartreuse;">{{ resul }}</h2>
+            </div>
+
+
+        </form>
+
+    </div>
+</div>

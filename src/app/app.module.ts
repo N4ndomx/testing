@@ -13,6 +13,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { FormsModule } from '@angular/forms';
 import { MediaComponent } from './media/media.component';
 import { UiA3Component } from './ui-a3/ui-a3.component';
+import { UiA5Component } from './ui-a5/ui-a5.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UiA3Component } from './ui-a3/ui-a3.component';
     SimpsonComponent,
     UiA1Component,
     MainMenuComponent,
-    UiA3Component
+    UiA3Component,
+    UiA5Component
   ],
   imports: [
     BrowserModule,
