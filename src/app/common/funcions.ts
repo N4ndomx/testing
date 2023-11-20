@@ -41,25 +41,25 @@ export function distribucionT(dof: number, x: number, n_seg: number): number[] {
     const arraX: number[] = [];
     const arraP2: number[] = [];
 
+    // Crear el arreglo de valores de x
     for (let i = 0; i < n_seg + 1; i++) {
-        if (i !== 0) {
-            arraX[i] = anterior + w;
-            anterior = arraX[i];
-        } else {
-            arraX[i] = 0;
-        }
+        arraX[i] = i * w; // Simplificar la asignación
     }
 
+    // Calcular los valores de la función de densidad de probabilidad
     for (let i = 0; i < arraX.length; i++) {
         const p1 = 1 + (Math.pow(arraX[i], 2) / dof);
         arraP2[i] = Math.pow(p1, ((dof + 1) / 2) * -1);
     }
 
+    // Calcular la constante de normalización
     const numerador: number = gamma((dof + 1) / 2);
-    const denominador: number = (Math.pow((dof * Math.PI), 0.5)) * gamma(dof / 2);
+    const denominador: number = Math.sqrt(dof * Math.PI) * gamma(dof / 2);
     const cons: number = numerador / denominador;
 
+    // Calcular los valores finales de la función de densidad de probabilidad
     const fx: number[] = arraP2.map(p2 => p2 * cons);
+
     return fx;
 }
 
