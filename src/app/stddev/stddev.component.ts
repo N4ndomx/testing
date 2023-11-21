@@ -29,7 +29,6 @@ export class StddevComponent {
 
   }
   calcularDesviacionEstandar(data: number[]): number {
-    if (!data || data.length === 0) return 0;
 
     const mean = this.compMedia.calcularMedia(data)
     const squaredDifferences = data.map((val) => Math.pow(val - mean, 2));

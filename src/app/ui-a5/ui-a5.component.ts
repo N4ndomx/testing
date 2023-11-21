@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { desactivarDataUser, distribucionT } from '../common/funcions';
+import { Component, } from '@angular/core';
 import { SimpsonComponent } from '../simpson/simpson.component';
 
 @Component({
@@ -39,8 +38,9 @@ export class UiA5Component {
       return funcion;
     }
 
-    return (x: number) => x;
   }
+
+
 
 
 }

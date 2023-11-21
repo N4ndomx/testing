@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LinearRegressionComponent } from '../linear-regression/linear-regression.component';
 import { CorrelationComponent } from '../correlation/correlation.component';
-import { desactivarDataUser, formatArryNum } from '../common/funcions';
+import { formatArryNum } from '../common/funcions';
 
 @Component({
   selector: 'app-ui-a3',
@@ -39,10 +39,6 @@ export class UiA3Component {
       myresult = this.componentLinear.calculoPrediction(this.dataplainNum, this.arraydataX, this.arraydataY);
       this.setLinearValues(this.arraydataX, this.arraydataY);
       this.correlacion(this.arraydataX, this.arraydataY)
-    } else {
-      myresult = this.componentLinear.calculoPrediction(this.dataplainNum, this.componentLinear.test1_x, this.componentLinear.test1_y);
-      this.setLinearValues(this.componentLinear.test1_x, this.componentLinear.test1_y);
-      this.correlacion(this.componentLinear.test1_x, this.componentLinear.test1_y)
     }
 
     this.result = myresult.toFixed(2);
@@ -52,9 +48,8 @@ export class UiA3Component {
     this.correlacio = this.componentCorre.correlationCoefficient(x, y).toFixed(4);
   }
 
-  dataUser() {
-    this.datausuario = desactivarDataUser(this.datausuario);
-  }
+
+
 
   private setLinearValues(x: number[], y: number[]) {
     this.b0 = this.componentLinear.calcularb0(x, y).toFixed(2);

@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'testing';
-  componenteVisible: string = ''; // Variable que indica qué componente mostrar
 
-  mostrarComponente(componente: string) {
-    console.log(componente)
-    this.componenteVisible = componente;
-  }
 }

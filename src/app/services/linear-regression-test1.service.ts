@@ -30,36 +30,23 @@ export class LinearRegressionTest1Service {
   getData1(): Observable<any> {
     return this.http.get<any>(this.test_1, this.httpOpcions).pipe(
       retry(1),
-      catchError(this.handleError)
     )
   }
   getData2(): Observable<any> {
     return this.http.get<any>(this.test_2, this.httpOpcions).pipe(
       retry(1),
-      catchError(this.handleError)
     )
   }
   getData3(): Observable<any> {
     return this.http.get<any>(this.test_3, this.httpOpcions).pipe(
       retry(1),
-      catchError(this.handleError)
     )
   }
   getData4(): Observable<any> {
     return this.http.get<any>(this.test_4, this.httpOpcions).pipe(
       retry(1),
-      catchError(this.handleError)
     )
   }
 
-  handleError(error: any) {
-    let errorMessage = ''
-    if (error.error instanceof ErrorEvent) {
-      errorMessage = error.error.message;
-    } else {
-      errorMessage = `Error code ${error.status} Mensage: ${error.message}`
-    }
-    window.alert(errorMessage)
-    return throwError(errorMessage)
-  }
+
 }

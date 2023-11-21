@@ -32,9 +32,7 @@ export class MediaComponent implements OnInit {
 
   calcularMedia(datos: number[]) {
     console.log(datos)
-    if (datos.length === 0) {
-      throw new Error("El array de datos no puede estar vacío");
-    }
+
 
     const suma = datos.reduce((total, valor) => total + valor, 0);
     const media = suma / datos.length;

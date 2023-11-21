@@ -5,8 +5,8 @@
             <div class="mb-1">
                 <label class="form-label">Ingrese los Datos</label>
                 <div class="form-text">Recuerde separa los datos por una coma (,)</div>
-                <input type="text" [disabled]="datausuario" [(ngModel)]="dataplan" name="data"
-                    class="form-control inputs" placeholder="1,2,3,4...">
+                <input type="text" [(ngModel)]="dataplan" name="data" class="form-control inputs"
+                    placeholder="1,2,3,4...">
             </div>
 
 
@@ -15,10 +15,10 @@
                 <button class="btn btn-secondary desviacion" type="button" (click)="desviacion()">Calcular Desviacion
                     estandar</button>
 
-                <label for="datatest">
+                <!-- <label for="datatest">
                     <input type="checkbox" id="datatest" name="datatest" (click)="dataUser()"> Datos de
                     prueba
-                </label>
+                </label> -->
             </div>
 
 

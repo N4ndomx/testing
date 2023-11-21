@@ -37,10 +37,7 @@ export class SimpsonComponent {
       const currentNumSeg = num_seg;
       const data: number[] | null = distribucionT(dof, x1, currentNumSeg);
 
-      if (data === null) {
-        console.error("Error en la distribucionT. No se pudo obtener datos válidos.");
-        return NaN; // O manejar el error de otra manera según tus necesidades
-      }
+
 
       let sum1 = 0;
       let sum2 = 0;
@@ -56,7 +53,7 @@ export class SimpsonComponent {
       integral = (data[0] * ((x1 - x0) / (3 * currentNumSeg))) + (data[data.length - 1] * ((x1 - x0) / (3 * currentNumSeg))) + sum1 + sum2;
     }
 
-    return isNaN(integral) ? 0 : integral;
+    return integral
   }
 
 

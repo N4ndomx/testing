@@ -49,9 +49,7 @@ export class CorrelationComponent implements OnInit {
   }
 
   correlationCoefficient(x: number[], y: number[]): number {
-    if (x.length !== y.length || x.length === 0) {
-      throw new Error("Los arreglos deben tener la misma longitud y no pueden estar vacíos");
-    }
+
 
     const n = x.length;
     const sumXValue = sumaX(x);
@@ -63,17 +61,13 @@ export class CorrelationComponent implements OnInit {
     const numerator = n * sumXYValue - sumXValue * sumYValue;
     const denominator = Math.sqrt((n * sumXSquared - sumXValue * sumXValue) * (n * sumYSquared - sumYValue * sumYValue));
 
-    if (denominator === 0) {
-      return 0; // Evitar la división por cero.
-    }
+
 
     const r = numerator / denominator;
     return r;
   }
   rcuadrada(x: number[], y: number[]): number {
-    if (x.length !== y.length || x.length === 0) {
-      throw new Error("Los arreglos deben tener la misma longitud y no pueden estar vacíos");
-    }
+
     return this.correlationCoefficient(x, y) ** 2
   }
 }

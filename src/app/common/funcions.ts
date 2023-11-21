@@ -68,10 +68,3 @@ export function formatArryNum(text: string): number[] {
     return text.replace(/\s/g, '').split(',').map(num => +num);
 }
 
-export function desactivarDataUser(datausuario: boolean) {
-    if (!datausuario) {
-        return datausuario = true
-    } else {
-        return datausuario = false
-    }
-}
