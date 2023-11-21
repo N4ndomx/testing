@@ -48,7 +48,7 @@ export class UiA3Component {
     this.result = myresult.toFixed(2);
   }
 
-  correlacion(x: number[], y: number[]) {
+  private correlacion(x: number[], y: number[]) {
     this.correlacio = this.componentCorre.correlationCoefficient(x, y).toFixed(4);
   }
 

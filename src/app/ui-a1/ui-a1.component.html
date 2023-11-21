@@ -11,8 +11,8 @@
 
 
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button" (click)="media()">Calcular Media </button>
-                <button class="btn btn-secondary" type="button" (click)="desviacion()">Calcular Desviacion
+                <button class="btn btn-secondary media" type="button" (click)="media()">Calcular Media </button>
+                <button class="btn btn-secondary desviacion" type="button" (click)="desviacion()">Calcular Desviacion
                     estandar</button>
 
                 <label for="datatest">
@@ -28,7 +28,7 @@
             <div class="resultado">
 
                 <label class="form-label">Resultado</label>
-                <h2 style="color: chartreuse;">{{ result }}</h2>
+                <h2 class="result">{{ result }}</h2>
             </div>
 
         </form>

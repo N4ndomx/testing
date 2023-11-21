@@ -81,3 +81,10 @@ td {
 td {
     height: 1rem
 }
+
+.b0,
+.correlacion,
+.b1,
+.result {
+    color: chartreuse;
+}
