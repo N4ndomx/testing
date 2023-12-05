@@ -15,12 +15,23 @@ export class UiA5Component {
   resul = 0
   funcionPlain = "f(x)="
   datausuario = false
+
+
+  opciones = [
+    { label: 'f(x)=x', value: 'f(x)=x' },
+    { label: 'f(x)=x*x', value: 'f(x)=x*x' },
+    { label: 'f(x)=1 / x', value: 'f(x)=1 / x' },
+    { label: 'f(x)=x*2', value: 'f(x)=x*2' }
+  ];
+
+  opcionSeleccionada: string = '';
   constructor(
     private componetSimp: SimpsonComponent
   ) { }
 
   calcularSimpson() {
-    this.resul = this.componetSimp.simpson(this.x0, this.x1, this.num_seg, this.error, this.traducirTextoAFuncion(this.funcionPlain), this.dof)
+    console.log(this.opcionSeleccionada)
+    this.resul = this.componetSimp.simpson(this.x0, this.x1, this.num_seg, this.error, this.traducirTextoAFuncion(this.opcionSeleccionada), this.dof)
   }
 
   traducirTextoAFuncion(texto: string): ((x: number) => number) | any {
